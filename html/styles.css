@@ -1,0 +1,56 @@
+
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    letter-spacing: .03vw;
+    /* background: rgb(196, 132, 255); */
+}
+
+
+.allstatus {
+    position: absolute;
+    top: 40%;
+    right: -2%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2vw;
+    color: white;
+    text-align: center;
+}
+
+.wallet {
+    position: relative;
+    width: auto;
+    max-width: auto;
+    background: rgba(0, 0, 0, 0.342);
+    padding: .5vw 1vw .5vw 1vw;
+    border-radius: .5vw;
+}
+
+.bank {
+    position: relative;
+    width: auto;
+    max-width: auto;
+    background: rgba(0, 0, 0, 0.479);
+    padding: .5vw 1vw .5vw 1vw;
+    border-radius: .5vw;
+}
+
+.coins {
+    position: relative;
+    width: auto;
+    max-width: auto;
+    background: rgba(0, 0, 0, 0.479);
+    padding: .5vw 1vw .5vw 1vw;
+    border-radius: .5vw;
+}
+
+.black {
+    position: relative;
+    width: auto;
+    max-width: auto;
+    background: rgba(0, 0, 0, 0.479);
+    padding: .5vw 1vw .5vw 1vw;
+    border-radius: .5vw;
+}
