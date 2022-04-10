@@ -3,17 +3,30 @@ ESX               = nil
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 
-RegisterServerEvent("5G-Hud:getMoneys")
-AddEventHandler("5G-Hud:getMoneys", function()
+RegisterCommand(Config.CommandCash, function(source)
 	local _source = source
-
 	local xPlayer = ESX.GetPlayerFromId(_source)
+	local money = xPlayer.getMoney()
+	TriggerClientEvent("5G-Hud:setValues", _source, 'money', money)
+end)
 
-	if xPlayer ~= nil then
+RegisterCommand(Config.CommandVIPCoins, function(source)
+	local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+	local coins = xPlayer.getAccount('coins').money
+	TriggerClientEvent("5G-Hud:setValues", _source, 'coins', coins)
+end)
 
-		local user_identifier = nil
-		user_identifier = xPlayer.getIdentifier()
+RegisterCommand(Config.CommandBank, function(source)
+	local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+	local bank = xPlayer.getAccount('bank').money
+	TriggerClientEvent('5G-Hud:setValues', _source, 'bank', bank)
+end)
 
-	    TriggerClientEvent("5G-Hud:setValues", _source, xPlayer.getMoney(), xPlayer.getAccount('bank').money, xPlayer.getAccount('coins').money, xPlayer.getAccount('black_money').money)
-	end
+RegisterCommand(Config.CommandBlackMoney, function(source)
+	local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+	local black_money = xPlayer.getAccount('black_money').money
+	TriggerClientEvent('5G-Hud:setValues', _source, 'black_money', black_money)
 end)
