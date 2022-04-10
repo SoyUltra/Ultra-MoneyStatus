@@ -4,7 +4,7 @@ game 'gta5'
 
 author 'Clau#1981 / DISCORD = https://discord.io/ultracode' 
 
-description 'Ultra Status'
+description 'Ultra Status 1.1'
 
 client_scripts {
     'Client/*.lua',
