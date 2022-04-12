@@ -24,6 +24,6 @@ ui_page {
 
 files {
 	'html/index.html',
-	'html/app.js', 
-    'html/styles.css',
+	'html/js/app.js', 
+    'html/css/styles.css',
 }
