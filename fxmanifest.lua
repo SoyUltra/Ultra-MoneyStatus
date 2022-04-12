@@ -7,15 +7,15 @@ author 'Clau#1981 / DISCORD = https://discord.io/ultracode'
 description 'Ultra Status 1.1'
 
 client_scripts {
-    'Client/*.lua',
+    'client/*.lua',
 }
 
 server_scripts {
-    'Server/*.lua',
+    'server/*.lua',
 }
 
 shared_scripts {
-    'Config.lua'
+    'config.lua'
 }
 
 ui_page {
