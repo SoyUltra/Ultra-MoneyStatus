@@ -17,36 +17,40 @@
       crossorigin="anonymous"
     ></script>
 
-    <link rel="stylesheet" href="css/app.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/app.js"></script>
+    <link href="http://fonts.cdnfonts.com/css/pricedown" rel="stylesheet" />
   </head>
 
-  <body>
-    <div class="allstatus">
-      <div class="wallet" style="display: none">
-        <div class="title" style="font-size: 0.8vw; text-align: center">
-          My Cash
+  <body class="bg-black">
+    <div class="allstatus flex flex-col items-end justify-end px-6 py-6">
+      <div class="flex flex-col items-center space-y-2 text-3xl">
+        <div class="wallet text-white" style="display: none">
+          <i class="fas fa-money-bill"
+            ><span class="dwallet drop-shadow-md"> $6500 </span></i
+          >
         </div>
-        <i class="fas fa-money-bill"><span class="dwallet"> $6500 </span></i>
-      </div>
-      <div class="bank" style="display: none">
-        <div class="title" style="font-size: 0.8vw; text-align: center">
-          My Money Bank
+        <div class="bank text-white" style="display: none">
+          <i class="fas fa-wallet"
+            ><span class="dbank drop-shadow-md"> $150000 </span></i
+          >
         </div>
-        <i class="fas fa-wallet"><span class="dbank"> $150000 </span></i>
-      </div>
-      <div class="coins" style="display: none">
-        <div class="title" style="font-size: 0.8vw; text-align: center">
-          My VIP Coin
+        <div class="coins text-white" style="display: none">
+          <i class="fas fa-badge-dollar"
+            ><span class="dcoins drop-shadow-md"> $50000 </span></i
+          >
         </div>
-        <i class="fas fa-badge-dollar"><span class="dcoins"> $50000 </span></i>
-      </div>
-      <div class="black" style="display: none">
-        <div class="title" style="font-size: 0.8vw; text-align: center">
-          My Black Money
+        <div class="black text-white" style="display: none">
+          <i class="fas fa-sack-dollar"
+            ><span class="dblack drop-shadow-md"> $50000 </span></i
+          >
         </div>
-        <i class="fas fa-sack-dollar"><span class="dblack"> $50000 </span></i>
       </div>
     </div>
+    <style>
+      * {
+        font-family: "Pricedown Bl", sans-serif;
+      }
+    </style>
   </body>
 </html>
