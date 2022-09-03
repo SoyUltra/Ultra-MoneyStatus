@@ -82,4 +82,4 @@ if Config.Framework == "QBCORE" then
             action = 'showcoins',
         }) 
     end)   
-	
+end
