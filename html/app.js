@@ -1,18 +1,7 @@
 $(function () {
     window.addEventListener('message', function(event) {
         var v = event.data     
-
-        // let wallet = event.data.wallet;
-        // let coins = event.data.coins;
-        // let bank = event.data.bank;
-        // let black_money = event.data.black_money;
-
-        // $(".dbank").text(bank);
-        // $(".dwallet").text(wallet);
-        // $(".dcoins").text(coins);
-        // $(".dblack").text(black_money);
         
-
         switch (v.action) {
 
             case "UpdateMoney":

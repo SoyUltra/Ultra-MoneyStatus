@@ -7,6 +7,8 @@
 
 Config = {}
 
+Config.Framework = "QBCORE"
+
 Config.WaitValue = 5000 
 Config.TimeStatus = 4000
 
