@@ -7,7 +7,7 @@
 
 Config = {}
 
-Config.Framework = "QBCORE"
+Config.Framework = "QBCORE"             -- QBCORE or ESX
 
 Config.WaitValue = 5000 
 Config.TimeStatus = 4000
