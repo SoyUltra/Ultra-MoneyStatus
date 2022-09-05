@@ -14,13 +14,15 @@ Config.TimeStatus = 4000
 
 Config.IconMoneys = ' $'
 
+Config.MoneyCash = true  
 Config.CommandCash = 'cash'
-Config.CommandVIPCoins = 'coins'
+
+Config.MoneyBank = true  
 Config.CommandBank = 'bank'
+
+Config.VIPCoins = false  
+Config.CommandVIPCoins = 'coins'
+
+Config.BlackMoney = false  
 Config.CommandBlackMoney = 'dirty'
 ---------------------------------------------------------------------------------------
-
-TriggerEvent('chat:addSuggestion', '/cash', 'See your Cash')
-TriggerEvent('chat:addSuggestion', '/coins', 'See your VIP Money')
-TriggerEvent('chat:addSuggestion', '/bank', 'See your Money bank')
-TriggerEvent('chat:addSuggestion', '/dirty', 'See your Black Money')

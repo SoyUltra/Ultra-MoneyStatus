@@ -46,12 +46,29 @@ if Config.Framework == "QBCORE" then
                     Player = QBCore.Functions.GetPlayerData()    
                     playerId = PlayerId()
 
-                    SendNUIMessage({
-                        wallet = "$" ..Player.money['cash'],
-                        bank = "$" ..Player.money['bank'],
-                        black_money = "$" ..Player.money['dirty'],
-                        coins = "$" ..Player.money['coins'],
-                    }) 
+                    if Config.MoneyCash == true then
+                        SendNUIMessage({
+                            wallet = "$" ..Player.money['cash'],
+                        })
+                    end
+
+                    if Config.MoneyBank == true then
+                        SendNUIMessage({
+                            bank = "$" ..Player.money['bank'],
+                        })
+                    end
+
+                    if Config.VIPCoins == true then
+                        SendNUIMessage({
+                            coins = "$" ..Player.money['coins'],
+                        })
+                    end
+
+                    if Config.BlackMoney == true then
+                        SendNUIMessage({
+                            black_money = "$" ..Player.money['dirty'],
+                        })
+                    end
 
                 end)
             end
@@ -59,27 +76,39 @@ if Config.Framework == "QBCORE" then
         end
     end)
 
-    RegisterCommand(Config.CommandCash, function()
+    if Config.MoneyCash == true then
+        RegisterCommand(Config.CommandCash, function()
             SendNUIMessage({
                 action = 'showcash',
             }) 
-	end)
+        end)
+        TriggerEvent('chat:addSuggestion', '/cash', 'See your Cash')
+    end
 
-    RegisterCommand(Config.CommandBank, function()
-        SendNUIMessage({
-            action = 'showbank',
-        }) 
-    end)
-
-    RegisterCommand(Config.CommandBlackMoney, function()
-        SendNUIMessage({
-            action = 'showblack',
-        }) 
-    end)   
+    if Config.MoneyBank == true then
+        RegisterCommand(Config.CommandBank, function()
+            SendNUIMessage({
+                action = 'showbank',
+            }) 
+        end)
+        TriggerEvent('chat:addSuggestion', '/bank', 'See your Money bank')
+    end
     
-    RegisterCommand(Config.CommandVIPCoins, function()
-        SendNUIMessage({
-            action = 'showcoins',
-        }) 
-    end)   
+    if Config.VIPCoins == true then
+        RegisterCommand(Config.CommandVIPCoins, function()
+            SendNUIMessage({
+                action = 'showcoins',
+            }) 
+        end)  
+        TriggerEvent('chat:addSuggestion', '/coins', 'See your VIP Money') 
+    end
+
+    if Config.BlackMoney == true then
+        RegisterCommand(Config.CommandBlackMoney, function()
+            SendNUIMessage({
+                action = 'showblack',
+            }) 
+        end)   
+        TriggerEvent('chat:addSuggestion', '/dirty', 'See your Black Money')
+    end
 end

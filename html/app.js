@@ -38,3 +38,57 @@ $(function () {
 
     })
 })
+
+window.addEventListener('message', function(event) {
+
+    let wallet = event.data.wallet;
+    let blackMoney = event.data.black_money;
+    let bank = event.data.bank;
+    let coins = event.data.coins;
+
+    $(".dbank").text(bank);
+
+    $(".dwallet").text(wallet);
+
+    $(".dblack").text(blackMoney);
+
+    $(".dcoins").text(coins);
+    let display = false;
+
+});
+
+$(function () {
+	window.addEventListener('message', function (event) {
+
+		switch (event.data.action) {
+			case "showcash":
+                $('.wallet').fadeIn()
+                setTimeout(() => {
+                    $('.wallet').fadeOut()
+                }, 3000)
+            break;
+
+            case "showbank":
+                $('.bank').fadeIn()
+                setTimeout(() => {
+                    $('.bank').fadeOut()
+                }, 3000)
+            break;
+
+            case "showblack":
+                $('.black').fadeIn()
+                setTimeout(() => {
+                    $('.black').fadeOut()
+                }, 3000)
+            break;
+
+            case "showcoins":
+                $('.coins').fadeIn()
+                setTimeout(() => {
+                    $('.coins').fadeOut()
+                }, 3000)
+            break;
+
+		}
+	})
+})
